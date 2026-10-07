@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="../SharedProjectConfiguration.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Software9119.Async.Superb</RootNamespace>
+    <AssemblyName>Software9119.Async.Superb</AssemblyName>
+    <PackageOutputFolder>./../packages/</PackageOutputFolder>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <PackageVersion>0.8.0</PackageVersion>
+    <PackageReadmeFile>./README.md</PackageReadmeFile>
+    <Description>Helpful and useful types for everyday async programming.</Description>
+    <PackageTags>Async,Lock</PackageTags>
+    <PackageProjectUrl>https://github.com/deep-outcome/Software9119.Async.Superb</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup Label="Info">
+    <None Include="./../LICENSE.md" Pack="true" PackagePath="\" />
+    <None Include="./README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PackageId>$(AssemblyName).$(Configuration)</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PackageId>$(AssemblyName)</PackageId>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <Target Name="CopyPackage" AfterTargets="Pack">
+    <Copy SourceFiles="$(OutputPath)\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(PackageOutputFolder)" />
+    <Copy SourceFiles="$(OutputPath)\$(PackageId).$(PackageVersion).snupkg" DestinationFolder="$(PackageOutputFolder)" />
+  </Target>
+
+  <ItemGroup>    
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.400" PrivateAssets="All" />    
+  </ItemGroup>
+
+</Project>

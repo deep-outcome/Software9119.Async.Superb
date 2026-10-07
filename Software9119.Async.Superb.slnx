@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/files/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path="LICENSE.md" />
+    <File Path="README.md" />
+    <File Path="SharedProjectConfiguration.props" />
+  </Folder>
+  <Project Path="Software9119.Async.Superb/Software9119.Async.Superb.csproj" />
+</Solution>
