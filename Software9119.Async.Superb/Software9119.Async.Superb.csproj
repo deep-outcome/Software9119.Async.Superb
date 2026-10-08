@@ -10,16 +10,18 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Package">
-    <PackageVersion>0.8.0</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <PackageReadmeFile>./README.md</PackageReadmeFile>
     <Description>Helpful and useful types for everyday async programming.</Description>
     <PackageTags>Async,Lock</PackageTags>
     <PackageProjectUrl>https://github.com/deep-outcome/Software9119.Async.Superb</PackageProjectUrl>
+    <PackageIcon>ico.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup Label="Info">
     <None Include="./../LICENSE.md" Pack="true" PackagePath="\" />
     <None Include="./README.md" Pack="true" PackagePath="\" />
+    <None Include="./../ico.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
