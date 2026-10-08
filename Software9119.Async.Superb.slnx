@@ -2,6 +2,7 @@
   <Folder Name="/files/">
     <File Path=".editorconfig" />
     <File Path=".gitattributes" />
+    <File Path=".github/workflows/nupkg-pub+test.yml" />
     <File Path="LICENSE.md" />
     <File Path="note.text" />
     <File Path="README.md" />
