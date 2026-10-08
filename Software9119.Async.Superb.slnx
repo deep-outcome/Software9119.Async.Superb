@@ -3,8 +3,10 @@
     <File Path=".editorconfig" />
     <File Path=".gitattributes" />
     <File Path="LICENSE.md" />
+    <File Path="note.text" />
     <File Path="README.md" />
     <File Path="SharedProjectConfiguration.props" />
   </Folder>
+  <Project Path="Software9119.Async.Superb.Testings/Software9119.Async.Superb.Testings.csproj" Id="11555475-7728-462d-b716-86e4c6edb6ab" />
   <Project Path="Software9119.Async.Superb/Software9119.Async.Superb.csproj" />
 </Solution>

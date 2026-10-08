@@ -3,7 +3,7 @@
   <Import Project="../SharedProjectConfiguration.props" />
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFrameworks>net10.0;net9.0</TargetFrameworks>
     <RootNamespace>Software9119.Async.Superb</RootNamespace>
     <AssemblyName>Software9119.Async.Superb</AssemblyName>
     <PackageOutputFolder>./../packages/</PackageOutputFolder>
@@ -36,8 +36,8 @@
     <Copy SourceFiles="$(OutputPath)\$(PackageId).$(PackageVersion).snupkg" DestinationFolder="$(PackageOutputFolder)" />
   </Target>
 
-  <ItemGroup>    
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.400" PrivateAssets="All" />    
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.400" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
