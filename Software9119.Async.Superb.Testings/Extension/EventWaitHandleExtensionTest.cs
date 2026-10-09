@@ -2,7 +2,7 @@ using Software9119.Async.Superb.Extension;
 
 using System.Diagnostics.CodeAnalysis;
 
-namespace Software9119.Async.Superb.Testings;
+namespace Software9119.Async.Superb.Testings.Extension;
 
 sealed public class WaitHandleExtensionsTests_WaitOneAsync
 {

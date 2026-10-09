@@ -7,4 +7,5 @@ instead of release build pckg [Software9119.Async.Superb](https://www.nuget.org/
 
 See specific readmes for more:
 
-- [`Software9119.Async.Superb.Extension`](Software9119.Async.Superb/Extension/readme.md)
+- [`Software9119.Async.Superb.Extension`](./Software9119.Async.Superb/Extension/readme.md) – extension methods
+- [`Software9119.Async.Superb.Synchronization`](./Software9119.Async.Superb/Synchronization/readme.md) – synchronization types
