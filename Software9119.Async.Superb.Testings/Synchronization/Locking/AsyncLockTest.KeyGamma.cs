@@ -52,7 +52,7 @@ sealed public class AsyncLockTestKeyGamma
 
     ValueTask<KeyGamma> test = locker.GammaAsync( int_infinite, cts.Token);
     await Task.Delay ( 300 );
-    
+
     cts.Cancel ();
 
     await AssertTaskCanceledException ( test );
@@ -212,7 +212,7 @@ sealed public class AsyncLockTestKeyGamma
     Assert.False ( locker.IsDisposed );
 
     KeyGamma A = await locker.GammaAsync(ts_infinite);
-    
+
     locker.Dispose ();
     SpinWait.SpinUntil ( () => locker.disposed );
     Assert.False ( locker.Unlock () );

@@ -47,7 +47,7 @@ public class AsyncLock : IDisposable
   /// <see cref="KeyGamma.Locked"/> property returns <see langword="false"/> when wait timed out or
   /// when this instance is disposed already.
   /// </item>
-  /// </list>  
+  /// </list>
   /// </remarks>
   /// <returns>Asynchronously <see cref="KeyGamma"/> which releases lock upon disposal.</returns>
   async public ValueTask<KeyGamma> GammaAsync ( TimeSpan? maxWaitTime = null, CancellationToken ct = default )
@@ -77,7 +77,7 @@ public class AsyncLock : IDisposable
   /// <see cref="KeyGamma.Locked"/> property returns <see langword="false"/> when wait timed out or
   /// when this instance is disposed already.
   /// </item>
-  /// </list>  
+  /// </list>
   /// </remarks>
   /// <returns>Asynchronously <see cref="KeyGamma"/> which releases lock upon disposal.</returns>
   async public ValueTask<KeyGamma> GammaAsync ( int maxWaitTimeMilliSecs, CancellationToken ct = default )
@@ -176,14 +176,14 @@ public class AsyncLock : IDisposable
   }
 
   /// <summary>
-  /// Disposes all managed resources, calls <see cref="GC.SuppressFinalize(object)"/> with 
+  /// Disposes all managed resources, calls <see cref="GC.SuppressFinalize(object)"/> with
   /// <see langword="this"/> and then calls <see cref="Dispose(bool)"/>
   /// with <see langword="true"/>.
   /// </summary>
   [SuppressMessage (
     "Design",
     "CA1063:Implement IDisposable Correctly",
-    Justification = @"More reliable as it does not rely on base.Dispose(true) call from derived type, 
+    Justification = @"More reliable as it does not rely on base.Dispose(true) call from derived type,
     reliable unless derived class explicitly declares 'new public void Dispose()' which is unlikely."
   )]
   public void Dispose ()
@@ -202,6 +202,6 @@ public class AsyncLock : IDisposable
 
   /// <summary>
   /// Disposal with option to specify managed+unmanaged (true) or just unmanaged resources (false) disposal.
-  /// </summary>  
+  /// </summary>
   virtual protected void Dispose ( bool disposing ) { }
 }

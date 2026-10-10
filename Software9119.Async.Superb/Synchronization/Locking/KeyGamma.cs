@@ -18,7 +18,7 @@ public struct KeyGamma : IDisposable
 {
   /// <summary>
   /// Async locker reference.
-  /// </summary>  
+  /// </summary>
   [SuppressMessage ( "Design", "CA1051:Do not declare visible instance fields", Justification = "Type open to inheritance extension." )]
   internal AsyncLock? alRef;
 
@@ -28,7 +28,7 @@ public struct KeyGamma : IDisposable
   /// Determines referential async lock existence.
   /// </summary>
   /// <returns>
-  /// <see langword="false"/> when waiting for lock entrance timed out 
+  /// <see langword="false"/> when waiting for lock entrance timed out
   /// or when <see cref="AsyncLock"/> is disposed already.
   /// </returns>
   readonly public bool Locked => alRef != null;
@@ -40,7 +40,7 @@ public struct KeyGamma : IDisposable
   [SuppressMessage (
   "Design",
   "CA1063:Implement IDisposable Correctly",
-  Justification = @"More reliable as it does not rely on base.Dispose(true) call from derived type, 
+  Justification = @"More reliable as it does not rely on base.Dispose(true) call from derived type,
     reliable unless derived class explicitly declares 'new public void Dispose()' which is unlikely."
 )]
   public void Dispose () => _ = Unlock ();
